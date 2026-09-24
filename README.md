@@ -1,11 +1,17 @@
 # 2-D HETENA · Hetena Tatakai
 
-A downloadable Excel dice-fighting adaptation is available:
+## Oynanabilir tarayıcı prototipi
 
-**[Download Hetena-Tatakai-Excel-Arena.xlsx](https://github.com/User-Gs/2-D-HETENA/raw/refs/heads/main/downloads/Hetena-Tatakai-Excel-Arena.xlsx)**
+[Oyunu indir (ZIP)](https://github.com/User-Gs/2-D-HETENA/raw/refs/heads/main/downloads/Hetena-Tatakai-2D-Prototype.zip) · [Kaynak dosyaları](https://github.com/User-Gs/2-D-HETENA)
 
-Open the file in Microsoft Excel and go to **PLAY**. Select your fighter and opponent, choose the opening stance and a match seed, then enter your move and die roll for each turn in the yellow cells. The bot's actions, damage, HP and result update through formulas. The **RULES** and **FIGHTERS** tabs explain the mechanics and roster.
+ZIP dosyasını çıkarıp `index.html` dosyasını Chrome veya Edge ile aç. Kurulum ve internet gerekmez. Ana menüden hızlı maç veya turnuva seç; dövüşçü ve arena seçerek oyna.
 
-This workbook is a **playable Excel adaptation** of the 2D dice-fighting concept. It is not the full visual/audio browser game: there are no character animations, sound effects, city hub, tournament progression or complete character passives in the spreadsheet. It has no macros or external data calls.
+[Tarayıcıda aç](https://user-gs.github.io/2-D-HETENA/) bağlantısı yalnızca depoda GitHub Pages etkinse çalışır. İndirilen ZIP bağımsız çalışır.
 
-The earlier README described a browser version in `dist/`, a ZIP and GitHub Pages. Those files are not present in this repository, so those download and play instructions were removed pending a real browser-game upload.
+Maç ekranında üstte karşılıklı can barları, ortada dövüşçüler, altta kaydırılabilir hamle ve zar paneli vardır. 12 dövüşçü, 3 arena, basit bot ve üç galibiyetlik turnuva içerir. [Kurallar ve mevcut sınırlar](README-GAME.md).
+
+## Excel uyarlaması
+
+[Excel dosyasını indir](https://github.com/User-Gs/2-D-HETENA/raw/refs/heads/main/downloads/Hetena-Tatakai-Excel-Arena.xlsx). Bu ayrı bir zar oyunu uyarlamasıdır.
+
+Özgün tarayıcı oyununun kaynak kodu ve karakter görselleri bu depoda bulunmadığından bu sürüm sıfırdan kurulmuş bir prototiptir; eski sürümün bütün animasyonlarını, seslerini ve pasiflerini içermez.

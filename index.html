@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101c2d">
+  <title>Hetena Tatakai · 2D Arena</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="sitebar">
+      <div class="brand"><span class="brand-mark">H</span><span>HETENA <b>TATAKAI</b><small>2D ARENA · OYNANABİLİR PROTOTİP</small></span></div>
+      <div class="site-actions"><button id="soundBtn" class="ghost" aria-label="Sesi aç veya kapat">♪ Ses açık</button><button id="helpBtn" class="ghost">Nasıl oynanır?</button></div>
+    </header>
+
+    <main>
+      <section id="home" class="home screen">
+        <div class="hero-content"><p class="eyebrow">ZARIN KARAR VERDİĞİ ARENA</p><h1>Her hamlenin<br><em>bir bedeli var.</em></h1><p>Karakterini seç. Rakibinin hamlesini oku. Zarını at ve ringi terk eden son dövüşçü ol.</p><div class="hero-buttons"><button id="quickBtn" class="primary big">Hızlı maç <span>→</span></button><button id="tournamentBtn" class="outline big">Turnuva modu</button></div><p class="status-note">12 dövüşçü · 3 arena · indirip çevrimdışı oynanabilir</p></div>
+        <div class="hero-art" aria-hidden="true"><div class="circle one"></div><div class="circle two"></div><div class="hero-letter">H</div><div class="hero-caption">FIGHT<br>YOUR WAY</div></div>
+      </section>
+
+      <section id="select" class="select screen hidden">
+        <div class="section-head"><button class="back" data-home>← Ana menü</button><p class="eyebrow">DÖVÜŞÇÜ SEÇİMİ</p><h2>Hikâyeni ringde yaz.</h2><p id="modeCaption">Hızlı maç için iki dövüşçü seç.</p></div>
+        <div class="selection-layout"><div><div class="label-line"><span>SENİN DÖVÜŞÇÜN</span><span id="fighterCount"></span></div><div id="roster" class="roster"></div></div><aside class="selection-side"><div id="selectedCard" class="selected-card"></div><div class="field"><label for="opponentSelect">Rakip</label><select id="opponentSelect"></select></div><div class="field"><label for="arenaSelect">Arena</label><select id="arenaSelect"><option value="temple">Yağmurlu Tapınak</option><option value="city">Gece Şehri</option><option value="coast">Kıyı Arenası</option></select></div><div class="stance"><span>MAÇ ÖNCESİ CEVAP</span><div class="stance-buttons"><button data-stance="aggressive" class="active">Agresif <small>İlk zara +1</small></button><button data-stance="passive">Sakin <small>Kontrollü başlangıç</small></button></div></div><button id="fightBtn" class="primary full">Maça gir →</button></aside></div>
+      </section>
+
+      <section id="battle" class="battle screen hidden">
+        <div id="arena" class="arena temple">
+          <div class="atmosphere"></div><div class="arena-lights"></div><div class="far-scenery"></div><div class="floor"></div>
+          <div class="hud"><div class="hud-fighter player-hud"><div id="playerPortrait" class="portrait"></div><div class="hud-content"><div class="hud-top"><strong id="playerName">LEYLA</strong><span id="playerHpText">24 / 24</span></div><div class="health"><div id="playerDamage" class="damage"></div><div id="playerHealth" class="health-fill"></div></div><small id="playerMood">ENERJİ 100%</small></div></div><div class="round-marker"><b id="roundNumber">01</b><span>RAUNT</span></div><div class="hud-fighter enemy-hud"><div class="hud-content"><div class="hud-top"><strong id="enemyName">ELENI</strong><span id="enemyHpText">22 / 22</span></div><div class="health"><div id="enemyDamage" class="damage"></div><div id="enemyHealth" class="health-fill"></div></div><small id="enemyMood">RAKİP HAZIR</small></div><div id="enemyPortrait" class="portrait"></div></div></div>
+          <div class="arena-title"><span id="arenaName">YAĞMURLU TAPINAK</span><button id="leaveBtn" class="leave" aria-label="Maçtan çık">✕</button></div>
+          <div id="fighterPlayer" class="fighter player" aria-label="Senin dövüşçün"><div class="shadow"></div><div class="body"><div class="hair"></div><div class="head"></div><div class="torso"></div><div class="belt"></div><div class="arm arm-left"><i></i></div><div class="arm arm-right"><i></i></div><div class="leg leg-left"></div><div class="leg leg-right"></div></div></div>
+          <div id="fighterEnemy" class="fighter opponent" aria-label="Rakip dövüşçü"><div class="shadow"></div><div class="body"><div class="hair"></div><div class="head"></div><div class="torso"></div><div class="belt"></div><div class="arm arm-left"><i></i></div><div class="arm arm-right"><i></i></div><div class="leg leg-left"></div><div class="leg leg-right"></div></div></div>
+          <div id="impact" class="impact"></div><div id="combatText" class="combat-text">Hamleni seç ve zarı at.</div>
+        </div>
+        <div class="controls"><div class="controls-heading"><div><span class="eyebrow">HAMLE PANELİ</span><h2>Nasıl saldıracaksın?</h2></div><div class="dice-area"><span>SON ZAR</span><strong id="diceFace">—</strong></div></div><div class="control-scroll"><div class="move-list"><button data-move="punch" class="move active"><span class="move-icon">✊</span><span><b>Düz yumruk</b><small>Güvenilir saldırı</small></span></button><button data-move="kick" class="move"><span class="move-icon">↗</span><span><b>Yüksek tekme</b><small>4–6 zarında güçlü</small></span></button><button data-move="guard" class="move"><span class="move-icon">◇</span><span><b>Savunma</b><small>Hasarı azalt, 1 can kazan</small></span></button><button data-move="taunt" class="move"><span class="move-icon">!</span><span><b>Kışkırt</b><small>Rakibin moralini düşür</small></span></button><button data-move="special" id="specialBtn" class="move"><span class="move-icon">✦</span><span><b>Özel hamle</b><small id="specialLabel">3 raunt bekleme</small></span></button></div><div class="turn-actions"><button id="rollBtn" class="primary roll">ZARI AT <span>⚄</span></button><div id="turnTip" class="turn-tip">Seçili hamle: Düz yumruk</div></div></div></div>
+      </section>
+    </main>
+    <footer>HETENA TATAKAI <span>·</span> TARAYICIDA ÇALIŞAN 2D PROTOTİP <span>·</span> v0.1</footer>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><p id="modalEyebrow" class="eyebrow"></p><h2 id="modalTitle"></h2><p id="modalBody"></p><div id="modalExtra"></div><div id="modalActions" class="modal-actions"></div></div></div>
+</body>
+</html>
