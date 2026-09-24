@@ -4,7 +4,7 @@
 
 [Oyunu indir (ZIP)](https://github.com/User-Gs/2-D-HETENA/raw/refs/heads/main/downloads/Hetena-Tatakai-2D-Prototype.zip) · [Kaynak dosyaları](https://github.com/User-Gs/2-D-HETENA)
 
-ZIP dosyasını çıkarıp `index.html` dosyasını Chrome veya Edge ile aç. Kurulum ve internet gerekmez. Ana menüden hızlı maç veya turnuva seç; dövüşçü ve arena seçerek oyna.
+ZIP dosyasını çıkarıp `Hetena-Tatakai-2D-Standalone.html` dosyasını Chrome veya Edge ile aç. HTML, CSS ve JavaScript tek dosyadadır. Kurulum ve internet gerekmez. Ana menüden hızlı maç veya turnuva seç; dövüşçü ve arena seçerek oyna.
 
 [Tarayıcıda aç](https://user-gs.github.io/2-D-HETENA/) bağlantısı için depo sahibi bir kez **Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save** seçmelidir. Pages etkinleşene kadar indirilen ZIP bağımsız çalışır.
 

@@ -5,11 +5,11 @@ Bu sürüm tarayıcıda çalışan, zar tabanlı bir **oynanabilir prototiptir**
 ## Oynama
 
 1. `Hetena-Tatakai-2D-Prototype.zip` dosyasını indirip bir klasöre çıkar.
-2. Klasördeki `index.html` dosyasını Chrome veya Edge ile aç.
+2. Klasördeki `Hetena-Tatakai-2D-Standalone.html` dosyasını Chrome veya Edge ile aç. Bu tek dosya CSS ve JavaScript kodlarını içinde taşır.
 3. **Hızlı maç** ya da **Turnuva modu** seç. Dövüşçünü seçip maça gir.
 4. Hamle seç, **Zarı at** düğmesine bas. Klavye: `1` yumruk, `2` tekme, `3` savunma, `4` kışkırtma, `5` özel hamle, `Boşluk` zar.
 
-Dosyalar birlikte tutulduğunda kurulum, sunucu ve internet gerekmez. Sesler tarayıcının Web Audio özelliğiyle üretilir ve üst menüden kapatılabilir.
+Kurulum, sunucu ve internet gerekmez. Sesler tarayıcının Web Audio özelliğiyle üretilir ve üst menüden kapatılabilir.
 
 ## Bu sürümde
 
